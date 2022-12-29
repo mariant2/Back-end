@@ -1,6 +1,14 @@
 ## Introduction
 Practice Backend with Node, create a second-hand item sales service calling Nodepop. The service maintains advertisements for the purchase or sale of articles and allows consultation and filtering by various criteria.
 
+
+
+
+//instalou uma livraria chance ...npm install chance..random de palavras aleatorias 
+//npm i nodemon
+//npx nodemon index.js
+//npm init -y
+
 ### MongoDB
 Start a local MongoDB server by typing the following line in a terminal:
 
