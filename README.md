@@ -20,6 +20,39 @@ npm install express mongoose
 node app.js
 
 
+### Design de datamodel
+
+```json
+const productSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    type: {
+        type: String,
+        required: true,
+        enum: ['find', 'sell']
+    },
+    price: {
+        type: Number,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    imageUrl: {
+        type: String,
+        required: true
+    },
+    tags: [{
+        type: String,
+        required: true,
+        enum: ['work', 'lifestyle', 'motor', 'mobile']
+    }]
+});
+```
+
 ### Definition
 Add a new product
 
