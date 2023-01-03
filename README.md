@@ -20,7 +20,7 @@ npm install express mongoose
 node app.js
 
 
-### Design de datamodel
+### Design the datamodel
 
 ```shell
 const productSchema = new mongoose.Schema({
@@ -52,6 +52,33 @@ const productSchema = new mongoose.Schema({
     }]
 });
 ```
+
+### Create a connection with your MongoDB
+
+```shell
+mongoose.connect('mongodb://localhost:27017/nodepop', {useNewUrlParser: true})
+```
+
+### Define the routes for your API
+
+```shell
+productRouter.post('/', (req, res) =>{
+    console.log(req.body);
+    const newProduct = new Product({
+        name: req.body.name,
+        type: req.body.type,
+        description: req.body.description,
+        imageUrl: req.body.imageUrl,
+        price: req.body.price,
+        tags: req.body.tags
+    })
+
+    newProduct.save()
+        .then(product => res.json(product))
+        .catch(err => res.status(500).json(err))
+});
+```
+
 
 ### Definition
 Add a new product
