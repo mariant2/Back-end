@@ -16,12 +16,25 @@ brew services start mongodb/brew/mongodb-community
 npm init
 npm install express mongoose
 
-###Start the server
-node index.js
+### Start the server
+node app.js
 
 
 ### Definition
-*[GET]* [http://localhost:3000/apiv1/ads](http://localhost:3000/apiv1/ads)
+Add a new product
 
-**GET** /apiv1/ads
+> http://localhost:3000/products
 
+<img width="712" alt="image" src="https://user-images.githubusercontent.com/104854007/210420138-ea87db45-dd78-42a8-a108-e4149443c2d4.png">
+
+
+Search for a product, including the tag and in order "desc"
+http://localhost:3000/products?tags=motor,mobile&sort=name&order=desc
+
+<img width="1012" alt="image" src="https://user-images.githubusercontent.com/104854007/210420438-fefbe7e1-3f18-4ce0-b147-177231bd6bd3.png">
+
+
+List of tags available
+http://localhost:3000/tags
+
+<img width="718" alt="image" src="https://user-images.githubusercontent.com/104854007/210420618-7ba285ce-dd35-42b7-b502-58e033e852d2.png">
