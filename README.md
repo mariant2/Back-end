@@ -22,7 +22,7 @@ node app.js
 
 ### Design de datamodel
 
-```json
+```shell
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
