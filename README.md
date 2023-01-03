@@ -81,3 +81,16 @@ The **/ads** endpoint in our API allows us to query, paginate, and filter data f
 
 **GET** /apiv1/ads
 
+// NOTAS
+
+# Install mongoDB
+brew tap mongodb/brew
+brew update
+brew install mongodb-community@6.0
+
+# Start mongoDB
+brew services start mongodb/brew/mongodb-community
+
+# Create Express project
+npm init
+npm install express mongoose
